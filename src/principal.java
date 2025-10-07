@@ -13,8 +13,8 @@ public class principal {
     private JList menuList;
     private JScrollPane barraPanel;
     private JPanel panelContenido;
-    private JPanel cardSocios;
-    private JPanel cardMembresia;
+    private JPanel cardClientes;
+    private JPanel cardPago;
     private JPanel cardProductos;
     private JPanel cardEjercicios;
     private JPanel cardRutinas;
@@ -25,21 +25,22 @@ public class principal {
     private JButton eliminarSocioButton;
     private JTable table1;
     private JPanel panelSocios;
-    private JButton nuevaMembresiaButton;
-    private JButton modificarMembresiaButton;
-    private JButton eliminarMembresiaButton;
-    private JTable table2;
-    private JTextField txtInicio;
-    private JComboBox comboBox1;
-    private JButton nuevoAlumnoButton;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField4;
-    private JTextField textField5;
-    private JTextField textField6;
-    private JTextField textField7;
-    private JTextField textField8;
-    private JTextField textField9;
+    private JButton registrarPagoButton;
+    private JButton modificarPagoButton;
+    private JButton eliminarPagoButton;
+    private JTable tablePagos;
+    private JTextField fechaPagotxt;
+    private JComboBox comboCliente;
+    private JTextField vencimientoPagotxt;
+    private JTextField montotxt;
+    private JComboBox estadoCombo;
+    private JTextField dniClienteTxt;
+    private JTextField nombreClientetxt;
+    private JTextField apellidoClienteTxt;
+    private JTextField emailTxt;
+    private JPanel panelPago;
+    private JButton guardarButton;
+    private JButton cancelarButton;
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
