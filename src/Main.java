@@ -11,6 +11,7 @@ public class Main {
             System.out.println("i = " + i);
 
  */
+        //Creo un objeto de la clase MenuPrincipal e invoco el metodo, mostrar menu
             MenuPrincipal menuPrincipal = new MenuPrincipal();
             menuPrincipal.mostrarmenu();
         }

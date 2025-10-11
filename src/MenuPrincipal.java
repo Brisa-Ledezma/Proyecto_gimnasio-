@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class MenuPrincipal {
@@ -53,45 +54,51 @@ public class MenuPrincipal {
     private JTextField especialidadTxt;
     private JButton cancelarBoton;
     private JButton guardarBoton;
+    private JPanel principalPanel;
     String valorusado;
+    private CardLayout despliegue;
 
     public MenuPrincipal() {
+        despliegue = new CardLayout();
+        panelContenido.setLayout(despliegue);
+        panelContenido.add(cardClientes, "Clientes");
+        panelContenido.add(cardProfesor, "Profesor");
+        panelContenido.add(cardPago, "Pagos");
+        panelContenido.add(cardProductos, "Productos");
+        panelContenido.add(cardEjercicios, "Ejercicios");
+        panelContenido.add(cardRutinas, "Rutinas");
+        panelContenido.add(cardRegistrosDeProgreso, "Registros de Progreso");
+
         menuList.addListSelectionListener(e -> {
             if (!e.getValueIsAdjusting()) {
+
                 String valorUsado = String.valueOf(menuList.getSelectedValue());
                 System.out.println("Seleccionaste: " + valorUsado);
+                despliegue.show(panelContenido, valorUsado);
 
-                switch (valorUsado){
-                    case "Profesor":
-                        agregarSocioButton.setText("Agregar "+valorUsado);
-                        break;
-                    case "Pagos":
-                        agregarSocioButton.setText("Agregar "+valorUsado);
-                        break;
-                    case "Productos":
-                        agregarSocioButton.setText("Agregar "+valorUsado);
-                        break;
-                    case "Ejercicios":
-                        agregarSocioButton.setText("Agregar "+valorUsado);
-                        break;
-                    case "Rutinas":
-                        agregarSocioButton.setText("Agregar "+valorUsado);
-                        break;
-                    case "Registros de Progreso":
-                        agregarSocioButton.setText("Agregar "+valorUsado);
-                        break;
-                    case "Clientes":
-                        agregarSocioButton.setText("Agregar "+valorUsado);
-                        break;
 
-                }
+
+            }
+        });
+        volverButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                cerrarventana(principalPanel);
             }
         });
 
+
     }
+
+    //Creo el metodo para poder cerrar una ventana, utilizando parametros del Java Swing UI
+    private void cerrarventana(JPanel panel) {
+        JFrame frame = (JFrame) SwingUtilities.getWindowAncestor(panel);
+        frame.dispose();
+    }
+    //Creo el metodo para mostrar una venta, utilizando parametros del Java Swing UI
         public void mostrarmenu(){
         JFrame frame = new JFrame("Principal");
-        frame.setContentPane(BorderLayout);
+        frame.setContentPane(principalPanel);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         frame.pack();
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
@@ -100,4 +107,5 @@ public class MenuPrincipal {
         frame.setLocation(x, y);
         frame.setVisible(true);
     }
+
 }
