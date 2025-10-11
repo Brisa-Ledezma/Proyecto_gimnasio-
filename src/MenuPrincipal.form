@@ -3,9 +3,11 @@
   <grid id="27dc6" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="798" height="446"/>
+      <xy x="20" y="20" width="945" height="447"/>
     </constraints>
-    <properties/>
+    <properties>
+      <visible value="true"/>
+    </properties>
     <border type="none"/>
     <children>
       <grid id="66ca2" binding="BorderLayout" layout-manager="GridLayoutManager" row-count="7" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -92,11 +94,6 @@
               <grid row="1" column="0" row-span="5" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
             </constraints>
           </vspacer>
-          <vspacer id="2f848">
-            <constraints>
-              <grid row="1" column="5" row-span="5" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-            </constraints>
-          </vspacer>
           <hspacer id="cf3ab">
             <constraints>
               <grid row="6" column="0" row-span="1" col-span="6" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -110,7 +107,7 @@
             </constraints>
             <properties>
               <continuousLayout value="true"/>
-              <dividerLocation value="187"/>
+              <dividerLocation value="14"/>
               <dividerSize value="8"/>
               <oneTouchExpandable value="true"/>
             </properties>
@@ -156,7 +153,7 @@
                       <card name="SOCIOS"/>
                     </constraints>
                     <properties>
-                      <visible value="false"/>
+                      <visible value="true"/>
                     </properties>
                     <border type="none"/>
                     <children>
@@ -183,7 +180,14 @@
                                 <preferred-size width="50" height="30"/>
                               </grid>
                             </constraints>
-                            <properties/>
+                            <properties>
+                              <autoCreateColumnsFromModel value="false"/>
+                              <autoscrolls value="true"/>
+                              <columnSelectionAllowed value="false"/>
+                              <enabled value="true"/>
+                              <showHorizontalLines value="true"/>
+                              <showVerticalLines value="true"/>
+                            </properties>
                           </component>
                           <component id="68391" class="javax.swing.JLabel">
                             <constraints>
@@ -531,12 +535,14 @@
                     <properties/>
                     <border type="none"/>
                     <children>
-                      <grid id="61cfa" binding="panelProfesor" layout-manager="GridLayoutManager" row-count="7" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                      <grid id="61cfa" binding="panelProfesor" layout-manager="GridLayoutManager" row-count="7" column-count="5" same-size-horizontally="true" same-size-vertically="true" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints>
                           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                         </constraints>
-                        <properties/>
+                        <properties>
+                          <inheritsPopupMenu value="false"/>
+                        </properties>
                         <border type="none"/>
                         <children>
                           <component id="4e03a" class="javax.swing.JLabel">
