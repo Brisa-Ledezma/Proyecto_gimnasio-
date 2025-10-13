@@ -28,6 +28,17 @@ public class conexion {
     }
 
     public static void cerrar() {
+        // Cierra la conexión si existe
+        try {
+            if (con != null && !con.isClosed()) {
+                con.close();
+            }
+        } catch (SQLException e) {
+            // Imprime la excepción para depuración
+            e.printStackTrace();
+        } finally {
+            con = null;
+        }
     }
 
 }
