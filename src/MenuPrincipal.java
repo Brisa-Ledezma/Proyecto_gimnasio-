@@ -1,9 +1,7 @@
 import javax.swing.*;
-import javax.swing.JSplitPane;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 
 public class MenuPrincipal {
     private JPanel BorderLayout;
@@ -60,17 +58,9 @@ public class MenuPrincipal {
     String valorusado;
     private CardLayout despliegue;
 
-
-    private JButton menuButton;
-    private JSplitPane splitPane;
-    private boolean menuCollapsed = false;
-    private ClientesPanel clientesPanel;
-    private PagosPanel pagosPanel;
-
     public MenuPrincipal() {
         despliegue = new CardLayout();
         panelContenido.setLayout(despliegue);
-
         panelContenido.add(cardClientes, "Clientes");
         panelContenido.add(cardProfesor, "Profesor");
         panelContenido.add(cardPago, "Pagos");
@@ -79,45 +69,15 @@ public class MenuPrincipal {
         panelContenido.add(cardRutinas, "Rutinas");
         panelContenido.add(cardRegistrosDeProgreso, "Registros de Progreso");
 
-
-        clientesPanel = new ClientesPanel();
-        pagosPanel = new PagosPanel();
-
-        panelContenido.remove(cardClientes);
-        panelContenido.remove(cardPago);
-        panelContenido.add(clientesPanel.getPanel(), "Clientes");
-        panelContenido.add(pagosPanel.getPanel(), "Pagos");
-
-
-        if (splitPane != null) {
-            splitPane.setOneTouchExpandable(false);
-            splitPane.setDividerSize(8);
-            // set initial width for sidebar
-            splitPane.setDividerLocation(220);
-        }
-
-        if (menuButton != null) {
-            menuButton.addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    if (splitPane != null) {
-                        if (menuCollapsed) {
-                            splitPane.setDividerLocation(220);
-                        } else {
-                            splitPane.setDividerLocation(0);
-                        }
-                        menuCollapsed = !menuCollapsed;
-                    }
-                }
-            });
-        }
-
-
         menuList.addListSelectionListener(e -> {
             if (!e.getValueIsAdjusting()) {
+
                 String valorUsado = String.valueOf(menuList.getSelectedValue());
-                //System.out.println("estoy en: " + valorUsado);
+                System.out.println("Seleccionaste: " + valorUsado);
                 despliegue.show(panelContenido, valorUsado);
+
+
+
             }
         });
         volverButton.addActionListener(new ActionListener() {
@@ -126,6 +86,7 @@ public class MenuPrincipal {
                 cerrarventana(principalPanel);
             }
         });
+
 
     }
 
