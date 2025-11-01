@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ComponentAdapter;
 
 public class MenuPrincipal {
     private JPanel BorderLayout;
@@ -26,7 +27,6 @@ public class MenuPrincipal {
     private JTextField nombreClientetxt;
     private JTextField apellidoClienteTxt;
     private JTextField emailTxt;
-    private JButton guardarButton;
     private JButton cancelarButton;
     private JPanel cardPago;
     private JPanel panelPago;
@@ -53,13 +53,30 @@ public class MenuPrincipal {
     private JTextField apellidoProfesorTxt;
     private JTextField especialidadTxt;
     private JButton cancelarBoton;
-    private JButton guardarBoton;
     private JPanel principalPanel;
     String valorusado;
     private CardLayout despliegue;
 
     public MenuPrincipal() {
         despliegue = new CardLayout();
+        // Después de configurar el CardLayout:
+        ClientesCard clientesCard = new ClientesCard(
+                table1,
+                dniClienteTxt,
+                nombreClientetxt,
+                apellidoClienteTxt,
+                emailTxt,
+                agregarSocioButton,
+                modificarSocioButton,
+                eliminarSocioButton,
+                cancelarButton
+        );
+
+// Inicializa la lógica y los listeners de la tarjeta Clientes.
+// También aplica el tema a los campos.
+        clientesCard.inicializar();
+
+
         panelContenido.setLayout(despliegue);
         panelContenido.add(cardClientes, "Clientes");
         panelContenido.add(cardProfesor, "Profesor");
@@ -86,6 +103,8 @@ public class MenuPrincipal {
                 cerrarventana(principalPanel);
             }
         });
+
+
 
 
     }

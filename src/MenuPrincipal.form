@@ -6,7 +6,7 @@
       <xy x="20" y="20" width="1300" height="500"/>
     </constraints>
     <properties>
-      <background color="-1729586"/>
+      <background color="-1712426"/>
       <foreground color="-1729586"/>
       <minimumSize width="1300" height="500"/>
       <preferredSize width="1000" height="500"/>
@@ -21,7 +21,7 @@
           </grid>
         </constraints>
         <properties>
-          <background color="-1729586"/>
+          <background color="-7427"/>
           <foreground color="-1729586"/>
         </properties>
         <border type="none"/>
@@ -34,7 +34,7 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-7251070"/>
+              <background color="-3359031"/>
             </properties>
             <border type="empty">
               <size top="5" left="5" bottom="5" right="5"/>
@@ -166,7 +166,7 @@
                         <item value="Registros de Progreso"/>
                       </model>
                       <preferredSize width="80" height="393"/>
-                      <selectionBackground color="-282652"/>
+                      <selectionBackground color="-1391365"/>
                       <selectionForeground color="-9748131"/>
                       <selectionMode value="0"/>
                       <valueIsAdjusting value="false"/>
@@ -179,7 +179,7 @@
                   <splitpane position="right"/>
                 </constraints>
                 <properties>
-                  <foreground color="-348446"/>
+                  <foreground color="-1116678"/>
                 </properties>
                 <border type="none"/>
                 <children>
@@ -198,7 +198,7 @@
                         <margin top="0" left="10" bottom="10" right="10"/>
                         <constraints border-constraint="Center"/>
                         <properties>
-                          <background color="-6987134"/>
+                          <background color="-2701353"/>
                           <visible value="true"/>
                         </properties>
                         <border type="none"/>
@@ -316,30 +316,6 @@
                               <margin top="2" left="9" bottom="2" right="6"/>
                             </properties>
                           </component>
-                          <component id="a1337" class="javax.swing.JButton" binding="guardarButton" default-binding="true">
-                            <constraints>
-                              <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                                <preferred-size width="-1" height="35"/>
-                              </grid>
-                            </constraints>
-                            <properties>
-                              <font size="14"/>
-                              <margin top="0" left="0" bottom="0" right="0"/>
-                              <text value="Guardar"/>
-                            </properties>
-                          </component>
-                          <component id="9408b" class="javax.swing.JButton" binding="cancelarButton" default-binding="true">
-                            <constraints>
-                              <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                                <preferred-size width="-1" height="35"/>
-                              </grid>
-                            </constraints>
-                            <properties>
-                              <font size="14"/>
-                              <margin top="0" left="0" bottom="0" right="0"/>
-                              <text value="Cancelar"/>
-                            </properties>
-                          </component>
                           <component id="10cdd" class="javax.swing.JButton" binding="eliminarSocioButton" default-binding="true">
                             <constraints>
                               <grid row="5" column="6" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
@@ -358,6 +334,18 @@
                               </grid>
                             </constraints>
                           </hspacer>
+                          <component id="9408b" class="javax.swing.JButton" binding="cancelarButton" default-binding="true">
+                            <constraints>
+                              <grid row="10" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                                <preferred-size width="-1" height="35"/>
+                              </grid>
+                            </constraints>
+                            <properties>
+                              <font size="14"/>
+                              <margin top="0" left="0" bottom="0" right="0"/>
+                              <text value="Cancelar"/>
+                            </properties>
+                          </component>
                         </children>
                       </grid>
                     </children>
@@ -698,14 +686,6 @@
                             </constraints>
                             <properties>
                               <text value="Cancelar"/>
-                            </properties>
-                          </component>
-                          <component id="eb2bc" class="javax.swing.JButton" binding="guardarBoton">
-                            <constraints>
-                              <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                            </constraints>
-                            <properties>
-                              <text value="Guardar"/>
                             </properties>
                           </component>
                         </children>
