@@ -97,6 +97,17 @@ public class ClientesCard {
                 String apellido = apellidoField.getText().trim();
                 String email = emailField.getText().trim();
 
+
+                if (!dni.matches("\\d+")) {
+                    JOptionPane.showMessageDialog(null, "El DNI solo debe contener números.");
+                    return;
+                }
+
+                if (dni.length() < 7 || dni.length() > 10) {
+                    JOptionPane.showMessageDialog(null, "El DNI debe tener entre 7 y 10 dígitos.");
+                    return;
+                }
+
                 if (dni.isEmpty() || nombre.isEmpty() || apellido.isEmpty()) {
                     JOptionPane.showMessageDialog(null, "DNI, Nombre y Apellido son obligatorios.");
                     return;
