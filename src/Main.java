@@ -4,8 +4,13 @@ import java.sql.SQLException;
 public class Main {
     public static void main(String[] args) {
 
-            MenuPrincipal menuPrincipal = new MenuPrincipal();
-            menuPrincipal.mostrarmenu();
+            /*MenuPrincipal menuPrincipal = new MenuPrincipal();
+            menuPrincipal.mostrarmenu();*/
+
+            // Abre la ventana de login boludaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+            login loginVentana = new login();
+            loginVentana.mostrarLogin();
+
             //verificamos que este bien conectada la BD
             Connection c = conexion.conectar();
             try {
